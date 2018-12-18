@@ -1,7 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9ff1c257-fb1a-4373-9cf6-85667ac160a8" name="Default" comment="" />
+    <list default="true" id="9ff1c257-fb1a-4373-9cf6-85667ac160a8" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/abaqus_intern_script/jnl-modify-post-process.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/base-script/back_process.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/base-script/jnl-1.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/abaqus_intern_script/jnl-1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/base-script/jnl-modify-post-process.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/base-script/jnl-modify-symmemtry.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/abaqus_intern_script/jnl-modify-symmemtry.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/base-script/jnl-modify.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/abaqus_intern_script/jnl-modify.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/base-script/jnl.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/abaqus_intern_script/jnl.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/base-script/rpy.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/abaqus_intern_script/rpy.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/base-script/备份.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/abaqus_intern_script/备份.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/.ipynb_checkpoints/Py_thesis-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Py_thesis.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compare_gratitude.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/crack_path.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/directory-test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pore_process.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/graph.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/poros_pore_pressure.png" beforeDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,14 +32,27 @@
     <SUITE FILE_PATH="coverage/py_thesis$pore_process.coverage" NAME="pore_process Coverage Results" MODIFIED="1543584840719" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/py_thesis$directory_test.coverage" NAME="directory-test Coverage Results" MODIFIED="1543118415564" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/py_thesis$auto_inp.coverage" NAME="auto_inp Coverage Results" MODIFIED="1543113265954" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/py_thesis$graph.coverage" NAME="graph Coverage Results" MODIFIED="1544758274268" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="pore_process.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/pore_process.py">
+      <file leaf-file-name="jnl-modify-post-process.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/abaqus_intern_script/jnl-modify-post-process.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="313">
-              <caret line="112" lean-forward="true" selection-start-line="114" selection-start-column="4" selection-end-line="128" selection-end-column="82" />
+            <state relative-caret-position="12483">
+              <caret line="679" column="16" selection-start-line="679" selection-start-column="16" selection-end-line="679" selection-end-column="16" />
+              <folding>
+                <element signature="e#23#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="graph.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/graph.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="158">
+              <caret line="146" column="34" lean-forward="true" selection-start-line="146" selection-start-column="34" selection-end-line="146" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -41,22 +72,12 @@
       <find>excavation_bottom</find>
     </findStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/data/leakoff/middle_crack_size_size_4.csv" />
-        <option value="$PROJECT_DIR$/data/viscosity/middle_crack_size_time_1.csv" />
-        <option value="$PROJECT_DIR$/data/viscosity/middle_crack_size_size_1.csv" />
-        <option value="$PROJECT_DIR$/data/viscosity/middle_crack_size_time_2.csv" />
-        <option value="$PROJECT_DIR$/data/viscosity/middle_crack_size_size_2.csv" />
-        <option value="$PROJECT_DIR$/data/viscosity/middle_crack_size_time_3.csv" />
-        <option value="$PROJECT_DIR$/data/viscosity/middle_crack_size_size_3.csv" />
-        <option value="$PROJECT_DIR$/data/viscosity/middle_crack_size_time_4.csv" />
-        <option value="$PROJECT_DIR$/data/viscosity/middle_crack_size_size_4.csv" />
-        <option value="$PROJECT_DIR$/data/viscosity/middle_crack_pre_time_1.csv" />
-        <option value="$PROJECT_DIR$/data/viscosity/middle_crack_pre_pre_1.csv" />
-        <option value="$PROJECT_DIR$/data/viscosity/middle_crack_pre_time_2.csv" />
-        <option value="$PROJECT_DIR$/data/viscosity/middle_crack_pre_pre_2.csv" />
         <option value="$PROJECT_DIR$/data/viscosity/middle_crack_pre_time_3.csv" />
         <option value="$PROJECT_DIR$/data/viscosity/middle_crack_pre_pre_3.csv" />
         <option value="$PROJECT_DIR$/data/viscosity/middle_crack_pre_time_4.csv" />
@@ -95,6 +116,19 @@
         <option value="$PROJECT_DIR$/src/crack_path.py" />
         <option value="$PROJECT_DIR$/data/size-effect/crack_path/test.csv" />
         <option value="$PROJECT_DIR$/src/pore_process.py" />
+        <option value="$PROJECT_DIR$/data/base-script/jnl-modify-post-process.py" />
+        <option value="$PROJECT_DIR$/src/abaqus_graph.py" />
+        <option value="$PROJECT_DIR$/src/abaqus_intern_script/备份.md" />
+        <option value="$PROJECT_DIR$/src/abaqus_intern_script/jnl-modify-post-process.py" />
+        <option value="$PROJECT_DIR$/data/abqus_script_result/abaqus.rpt" />
+        <option value="$PROJECT_DIR$/data/abqus_script_result/abaqus.csv" />
+        <option value="$PROJECT_DIR$/data/abqus_script_result/coordinates/excavation8-5.csv" />
+        <option value="$PROJECT_DIR$/data/abqus_script_result/coordinates/excavation8-5_x.csv" />
+        <option value="$PROJECT_DIR$/data/abqus_script_result/coordinates/abaqus7.csv" />
+        <option value="$PROJECT_DIR$/data/abqus_script_result/coordinates/abaqus9.csv" />
+        <option value="$PROJECT_DIR$/data/abqus_script_result/coordinates/abaqus10.csv" />
+        <option value="$PROJECT_DIR$/data/abqus_script_result/coordinates/amplitude_1/angle.csv" />
+        <option value="$PROJECT_DIR$/src/graph.py" />
       </list>
     </option>
   </component>
@@ -107,17 +141,20 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-2" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="122" />
+    <option name="y" value="-18" />
     <option name="width" value="1866" />
-    <option name="height" value="1025" />
+    <option name="height" value="977" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -133,29 +170,19 @@
             <path>
               <item name="py_thesis" type="b2602c69:ProjectViewProjectNode" />
               <item name="py_thesis" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="base" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="py_thesis" type="b2602c69:ProjectViewProjectNode" />
-              <item name="py_thesis" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="permeability" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="py_thesis" type="b2602c69:ProjectViewProjectNode" />
-              <item name="py_thesis" type="462c0819:PsiDirectoryNode" />
-              <item name="output" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="py_thesis" type="b2602c69:ProjectViewProjectNode" />
               <item name="py_thesis" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="abaqus_intern_script" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -166,16 +193,19 @@
     <property name="settings.editor.selected.configurable" value="PyScientificConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\thesis\mini-thesis\py_thesis\data\base-script" />
-      <recent name="D:\论文产出\小论文\py_thesis\data\base-script" />
-      <recent name="D:\论文产出\小论文\py_thesis\data\permeability" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\thesis\mini-thesis\py_thesis\data\abqus_script_result\coordinates" />
+      <recent name="D:\thesis\mini-thesis\py_thesis\src" />
       <recent name="D:\thesis\mini-thesis\py_thesis\data\size-effect" />
       <recent name="D:\论文产出\小论文\py_thesis\data" />
       <recent name="D:\论文产出\小论文\py_thesis\data\base" />
-      <recent name="D:\论文产出\小论文\py_thesis\src" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\thesis\mini-thesis\py_thesis\data\abqus_script_result\coordinates\amplitude_1" />
+      <recent name="D:\thesis\mini-thesis\py_thesis\src\abaqus_intern_script" />
+      <recent name="D:\thesis\mini-thesis\py_thesis\data\abqus_script_result\coordinates" />
+      <recent name="D:\thesis\mini-thesis\py_thesis\data\abqus_script_result" />
+      <recent name="D:\thesis\mini-thesis\py_thesis\src" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -190,7 +220,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.pore_process">
+  <component name="RunManager" selected="Python.graph">
     <configuration name="auto_inp" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="py_thesis" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -248,6 +278,25 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
+    <configuration name="graph" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="py_thesis" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/graph.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <configuration name="pore_process" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="py_thesis" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -261,7 +310,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/pore_process.py" />
+      <option name="SCRIPT_NAME" value="D:\thesis\mini-thesis\py_thesis\src\graph.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -272,9 +321,11 @@
       <item itemvalue="Python.auto_inp" />
       <item itemvalue="Python.directory-test" />
       <item itemvalue="Python.crack_path" />
+      <item itemvalue="Python.graph" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.graph" />
         <item itemvalue="Python.pore_process" />
         <item itemvalue="Python.crack_path" />
         <item itemvalue="Python.directory-test" />
@@ -296,20 +347,19 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-2" y="0" width="1866" height="1025" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Python Console" order="7" weight="0.18241759" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.2912088" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Python Console" order="7" weight="0.4351064" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.38404256" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18756756" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1375" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.37582418" />
-      <window_info active="true" anchor="right" x="1135" y="263" width="516" height="333" id="SciView" order="3" visible="true" weight="0.3772973" />
+      <window_info anchor="right" x="1135" y="263" width="516" height="333" id="SciView" order="3" visible="true" weight="0.41302082" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3813187" />
@@ -319,29 +369,30 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.37582418" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2421875" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.39086294" />
+      <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.36025506" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Terminal" order="11" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="right" x="1135" y="263" width="516" height="333" id="SciView" order="4" visible="true" weight="0.12760417" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.38215104" />
-      <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info id="Favorites" order="2" side_tool="true" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -363,162 +414,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/data/viscosity/middle_crack_size_time_2.csv">
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="653">
-          <caret line="876" selection-start-line="876" selection-end-line="876" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/viscosity/middle_crack_size_size_2.csv">
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="653">
-          <caret line="876" selection-start-line="876" selection-end-line="876" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/viscosity/middle_crack_size_time_3.csv">
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="653">
-          <caret line="874" selection-start-line="874" selection-end-line="874" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/viscosity/middle_crack_size_size_3.csv">
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="653">
-          <caret line="874" selection-start-line="874" selection-end-line="874" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/viscosity/middle_crack_size_time_4.csv">
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="653">
-          <caret line="1004" selection-start-line="1004" selection-end-line="1004" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/viscosity/middle_crack_size_size_4.csv">
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="653">
-          <caret line="1004" selection-start-line="1004" selection-end-line="1004" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/viscosity/middle_crack_pre_time_1.csv">
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="877">
-          <caret line="904" selection-start-line="904" selection-end-line="904" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/viscosity/middle_crack_pre_pre_1.csv">
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="877">
-          <caret line="904" selection-start-line="904" selection-end-line="904" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/viscosity/middle_crack_pre_time_2.csv">
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="877">
-          <caret line="876" selection-start-line="876" selection-end-line="876" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/viscosity/middle_crack_pre_pre_2.csv">
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="877">
-          <caret line="876" selection-start-line="876" selection-end-line="876" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/viscosity/middle_crack_pre_time_3.csv">
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="877">
-          <caret line="874" selection-start-line="874" selection-end-line="874" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/viscosity/middle_crack_pre_pre_3.csv">
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="877">
-          <caret line="874" selection-start-line="874" selection-end-line="874" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/viscosity/middle_crack_pre_time_4.csv">
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="877">
-          <caret line="1004" selection-start-line="1004" selection-end-line="1004" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/viscosity/middle_crack_pre_pre_4.csv">
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="877">
-          <caret line="1004" selection-start-line="1004" selection-end-line="1004" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/base-script/rpy.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/base-script/jnl.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="897">
-          <caret line="321" column="19" selection-start-line="321" selection-start-column="19" selection-end-line="329" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/base-script/jnl-1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="103">
-          <caret line="221" column="33" selection-start-line="221" selection-start-column="26" selection-end-line="221" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/directory-test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="39" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/base-script/jnl-modify.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="518" column="12" lean-forward="true" selection-start-line="518" selection-start-column="12" selection-end-line="518" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/auto_inp.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="61" column="45" selection-start-line="61" selection-start-column="45" selection-end-line="61" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/compare_gratitude.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/base-script/back_process.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/size-effect/poros/middle_crack_poros_time_2049.csv">
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="3188">
-          <caret line="194" selection-start-line="194" selection-end-line="194" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/size-effect/poros/middle_crack_poros_poros_2049.csv">
       <provider selected="true" editor-type-id="csv-text-editor">
         <state relative-caret-position="680">
@@ -694,17 +589,119 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/crack_path.py">
+    <entry file="file://$PROJECT_DIR$/src/auto_inp.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        <state relative-caret-position="1159">
+          <caret line="61" column="45" selection-start-line="61" selection-start-column="45" selection-end-line="61" selection-end-column="45" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pore_process.py">
+    <entry file="file://$PROJECT_DIR$/src/abaqus_graph.py" />
+    <entry file="file://$PROJECT_DIR$/data/base-script/back_process.py" />
+    <entry file="file://$PROJECT_DIR$/src/abaqus_intern_script/jnl.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="112" lean-forward="true" selection-start-line="114" selection-start-column="4" selection-end-line="128" selection-end-column="82" />
+        <state relative-caret-position="845">
+          <caret line="321" column="19" selection-start-line="321" selection-start-column="19" selection-end-line="329" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/crack_path.py" />
+    <entry file="file://$PROJECT_DIR$/src/directory-test.py" />
+    <entry file="file://$PROJECT_DIR$/src/abaqus_intern_script/jnl-modify.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9443">
+          <caret line="518" column="12" lean-forward="true" selection-start-line="518" selection-start-column="12" selection-end-line="518" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/abqus_script_result/y_Centrifuge-2018-12-13-16-49.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2508" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/compare_gratitude.py" />
+    <entry file="file://$PROJECT_DIR$/data/abqus_script_result/x_Centrifuge-2018-12-13-16-49.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Python_Extract_Nodal_Stress.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-192" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/abaqus_intern_script/备份.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="494">
+            <caret line="26" column="8" lean-forward="true" selection-start-line="26" selection-end-line="26" selection-end-column="8" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/abqus_script_result/coordinates/excavation8-5_x.csv" />
+    <entry file="file://$PROJECT_DIR$/data/abqus_script_result/abaqus8.rpt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-76">
+          <caret line="11" selection-start-line="11" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/abaqus_intern_script/jnl-modify-post-process.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="12483">
+          <caret line="679" column="16" selection-start-line="679" selection-start-column="16" selection-end-line="679" selection-end-column="16" />
+          <folding>
+            <element signature="e#23#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/abaqus_intern_script/jnl-modify-base.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/abqus_script_result/coordinates/abaqus8.csv">
+      <provider selected="true" editor-type-id="csv-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/abqus_script_result/coordinates/abaqus9.csv">
+      <provider selected="true" editor-type-id="csv-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/abqus_script_result/coordinates/abaqus7.csv">
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="399">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/abqus_script_result/coordinates/abaqus10.csv">
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="361">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/abqus_script_result/coordinates/amplitude_1/abaqus_10.csv">
+      <provider selected="true" editor-type-id="csv-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/abqus_script_result/coordinates/amplitude_1/abaqus_7.csv">
+      <provider selected="true" editor-type-id="csv-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/abqus_script_result/coordinates/amplitude_1/abaqus_8.csv">
+      <provider selected="true" editor-type-id="csv-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/abqus_script_result/coordinates/amplitude_1/abaqus_9.csv">
+      <provider selected="true" editor-type-id="csv-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/abqus_script_result/coordinates/amplitude_1/angle.csv">
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/graph.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="146" column="34" lean-forward="true" selection-start-line="146" selection-start-column="34" selection-end-line="146" selection-end-column="34" />
         </state>
       </provider>
     </entry>

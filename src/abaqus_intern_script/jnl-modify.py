@@ -59,19 +59,19 @@ min_vertical_limit = -5.0
 # crack_node_right = 141
 
 # excavation=15
-max_excavation_horizon_limit = 7.5
-min_execavation_horizon_limit = -7.5
-crack_horizon_limit = 0.0
-crack_node_left = 143
-crack_node_right = 144
+# max_excavation_horizon_limit = 7.5
+# min_execavation_horizon_limit = -7.5
+# crack_horizon_limit = 0.0
+# crack_node_left = 143
+# crack_node_right = 144
 
 
 # excavation=17
-# max_excavation_horizon_limit = 8.5
-# min_execavation_horizon_limit = -8.5
-# crack_horizon_limit = 0.0
-# crack_node_left = 146
-# crack_node_right = 147
+max_excavation_horizon_limit = 8.5
+min_execavation_horizon_limit = -8.5
+crack_horizon_limit = 0.0
+crack_node_left = 146
+crack_node_right = 147
 
 # excavation=19
 # max_excavation_horizon_limit = 9.5
@@ -353,7 +353,10 @@ mdb.models['Model-1'].SoilsStep(cetol=None, initialInc=0.05, matrixSolver=DIRECT
     previous='execavation', timePeriod=1.0, utol=1e09)
 mdb.models['Model-1'].SoilsStep(cetol=None, initialInc=0.05, matrixSolver=
     DIRECT, matrixStorage=UNSYMMETRIC, maxInc=5.0, minInc=1e-12, name=
-    'injection', previous='pore-balance', timePeriod=80.0, utol=1e09)
+    'injection', previous='pore-balance', timePeriod=100.0, utol=1e09, response=STEADY_STATE)
+# mdb.models['Model-1'].SoilsStep(amplitude=RAMP, cetol=1000.0, end=None, 
+#     initialInc=0.01, maxNumInc=1000, name='injection', previous='Step-5', 
+#     response=STEADY_STATE, utol=None)
 mdb.models['Model-1'].fieldOutputRequests['F-Output-1'].setValues(variables=(
     'S', 'LE', 'U', 'RF', 'CF', 'CSTRESS', 'CDISP', 'PHILSM', 'PSILSM', 
     'VOIDR', 'SAT', 'POR'))

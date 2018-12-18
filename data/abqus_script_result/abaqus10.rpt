@@ -1,0 +1,63 @@
+********************************************************************************
+Probe Values Report, written on Fri Dec 14 20:43:58 2018
+
+Source
+-------
+
+   ODB: D:/thesis/mini-thesis/centrifuge/Centrifuge-2018-12-14-20-34.odb
+   Step: injection
+   Frame: Increment    100: Step Time =    87.81
+   Variable: S, Mises (Avg: 75)
+
+Probe values reported at nodes
+
+  Part Instance     Node ID                Orig. Coords                               Def. Coords              
+                                   X             Y             Z             X             Y             Z     
+-------------------------------------------------------------------------------------------------------------
+      SOIL-1        8404            0.            0.            0.            0.            0.            0.
+      SOIL-1        1771   -1.319E-013            1.            0.       0.06772        0.9738            0.
+      SOIL-1        1775           0.5            1.            0.        0.5668        0.9768            0.
+      SOIL-1        1779           1.5         1.001            0.         1.573        0.9956            0.
+      SOIL-1        1783           2.5         1.671            0.         2.568         1.658            0.
+      SOIL-1        1787         3.185            2.            0.          3.25         1.986            0.
+      SOIL-1        1791           3.5         2.352            0.         3.558         2.341            0.
+      SOIL-1        1795           4.5         2.938            0.         4.556         2.917            0.
+      SOIL-1        1799         4.605            3.            0.         4.661          2.98            0.
+      SOIL-1        1803         4.953            4.            0.         5.002         3.989            0.
+      SOIL-1        1807           5.5         4.828            0.         5.549         4.809            0.
+      SOIL-1        1811         5.744            5.            0.         5.791         4.983            0.
+      SOIL-1        1815           6.5         5.537            0.         6.537         5.524            0.
+      SOIL-1        1819         6.903            6.            0.         6.937         5.988            0.
+      SOIL-1        1823         7.053            7.            0.         7.088         6.996            0.
+      SOIL-1        1831           7.5         8.004            0.         7.525         8.002            0.
+      SOIL-1        1835          7.51            9.            0.         7.533         9.004            0.
+      SOIL-1        1840           7.5         10.09            0.         7.498          10.1            0.
+      SOIL-1        1007           7.5           11.            0.           7.5         11.01            0.
+
+
+  Part Instance     Node ID  Attached elements      S, Mises
+-------------------------------------------------------------
+      SOIL-1        8404          4980       NoValue
+      SOIL-1        1771          1664       NoValue
+      SOIL-1        1775          1666       NoValue
+      SOIL-1        1779          1668       NoValue
+      SOIL-1        1783          1670       NoValue
+      SOIL-1        1787          1672       NoValue
+      SOIL-1        1791          1674       NoValue
+      SOIL-1        1795          1676       NoValue
+      SOIL-1        1799          1678       NoValue
+      SOIL-1        1803          1680       NoValue
+      SOIL-1        1807          1682       NoValue
+      SOIL-1        1811          1684       NoValue
+      SOIL-1        1815          1686       NoValue
+      SOIL-1        1819          1688       NoValue
+      SOIL-1        1823          1690       NoValue
+      SOIL-1        1831          1694       NoValue
+      SOIL-1        1835          1696       NoValue
+      SOIL-1        1840          1698       NoValue
+      SOIL-1        1007           823    1.186E+005
+      SOIL-1        1007           824    1.186E+005
+      SOIL-1        1007           835    1.186E+005
+      SOIL-1        1007           836    1.186E+005
+
+
