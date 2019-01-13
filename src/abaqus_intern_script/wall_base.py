@@ -411,10 +411,10 @@ def pre_process(parameter):
         0.0, 0.0), )))
     mdb.models['Model-1'].rootAssembly.Set(edges=
         mdb.models['Model-1'].rootAssembly.instances['soil-1'].edges.findAt(((
-        parameter['min_execavation_horizon_limit'], parameter['excavation_bottom']+1, 0.0), )), name='left-prop-edge')
+        parameter['min_execavation_horizon_limit'], parameter['min_excavation_vertical_limit']+1, 0.0), )), name='left-prop-edge')
     mdb.models['Model-1'].rootAssembly.Set(edges=
         mdb.models['Model-1'].rootAssembly.instances['soil-1'].edges.findAt(((
-        parameter['max_excavation_horizon_limit'],  parameter['excavation_bottom']+1, 0.0), )), name='right-prop-edge')
+        parameter['max_excavation_horizon_limit'],  parameter['min_excavation_vertical_limit']+1, 0.0), )), name='right-prop-edge')
     mdb.models['Model-1'].rootAssembly.Set(edges=
         mdb.models['Model-1'].rootAssembly.instances['soil-1'].edges.findAt(((parameter['min_execavation_horizon_limit'],
         parameter['max_vertical_limit']-1, 0.0), ), ((0, parameter['excavation_bottom'], 0.0), ), ((parameter['max_excavation_horizon_limit'], parameter['max_vertical_limit']-1, 0.0), ), ((parameter['min_horizon_limit']+1, parameter['max_vertical_limit'],
@@ -480,12 +480,12 @@ def pre_process(parameter):
     mdb.models['Model-1'].DisplacementBC(amplitude=UNSET, createStepName=
         'execavation', distributionType=UNIFORM, fieldName='', fixed=OFF, 
         localCsys=None, name='left-prop', region=
-        mdb.models['Model-1'].rootAssembly.sets['left-prop-edge'], u1=UNSET, u2=0.0, ur3=
+        mdb.models['Model-1'].rootAssembly.sets['left-prop-edge'], u1=0.0, u2=0.0, ur3=
         UNSET)
     mdb.models['Model-1'].DisplacementBC(amplitude=UNSET, createStepName=
         'execavation', distributionType=UNIFORM, fieldName='', fixed=OFF, 
         localCsys=None, name='right-prop', region=
-        mdb.models['Model-1'].rootAssembly.sets['right-prop-edge'], u1=UNSET, u2=0.0, ur3=
+        mdb.models['Model-1'].rootAssembly.sets['right-prop-edge'], u1=0.0, u2=0.0, ur3=
         UNSET)
     mdb.models['Model-1'].DisplacementBC(amplitude=UNSET, createStepName=
         'injection', distributionType=UNIFORM, fieldName='', fixed=OFF, 

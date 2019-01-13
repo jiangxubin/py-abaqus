@@ -29,114 +29,7 @@ from auto_inp import PYXFEM
 in_inp_path = "D:\\thesis\\mini-thesis\\centrifuge\\Job-centrifuge.inp"
 out_inp_path = "D:\\thesis\\mini-thesis\\centrifuge\\Job-centrifuge-modify.inp"
 root_path = "D:\\thesis\\mini-thesis\\centrifuge\\"
-# now = datetime.datetime.now()
-# job_name = "Centrifuge-{}".format(now.strftime("%Y-%m-%d-%H:%M"))
 
-
-
-
-
-
-
-# excavation=13
-# parameter['max_excavation_horizon_limit'] = 6.5
-# parameter['min_execavation_horizon_limit'] = -6.5
-# parameter['crack_horizon_limit'] = 0.0
-# parameter['crack_node_left'] = 140
-# parameter['crack_node_right'] = 141
-
-# excavation=15
-# parameter['max_excavation_horizon_limit'] = 7.5
-# parameter['min_execavation_horizon_limit'] = -7.5
-# parameter['crack_horizon_limit_bottom'] = 0.0
-# parameter['crack_horizon_limit_mid'] = 0.0
-# parameter['crack_horizon_limit_top'] = 0.0
-# parameter['crack_vertical_limit_bottom'] = 0.0
-# parameter['crack_vertical_limit_mid'] = 0.5
-# parameter['crack_vertical_limit_top'] = 1.0
-# parameter['crack_node_left'] = 143
-# parameter['crack_node_right'] = 144
-
-
-# excavation=17
-# parameter['max_excavation_horizon_limit'] = 8.5
-# parameter['min_execavation_horizon_limit'] = -8.5
-# parameter['crack_horizon_limit_bottom'] = 0.0
-# parameter['crack_horizon_limit_mid'] = 0.0
-# parameter['crack_horizon_limit_top'] = 0.0
-# parameter['crack_vertical_limit_bottom'] = 0.0
-# parameter['crack_vertical_limit_mid'] = 0.5
-# parameter['crack_vertical_limit_top'] = 1.0
-# parameter['crack_node_left'] = 146
-# parameter['crack_node_right'] = 147
-
-# parameter['max_excavation_horizon_limit'] = 8.5
-# parameter['min_execavation_horizon_limit'] = -8.5
-# parameter['crack_horizon_limit_bottom'] = 0.8
-# parameter['crack_horizon_limit_mid'] = 1.0
-# parameter['crack_horizon_limit_top'] = 1.2
-# parameter['crack_vertical_limit_bottom'] = 1.0
-# parameter['crack_vertical_limit_mid'] = 1.5
-# parameter['crack_vertical_limit_top'] = 2.0
-# parameter['crack_node_left'] = 1058
-# parameter['crack_node_right'] = 1047
-
-# excavation=19
-# parameter['max_excavation_horizon_limit'] = 9.5
-# parameter['min_execavation_horizon_limit'] = -9.5
-# parameter['crack_horizon_limit_bottom'] = 0.0
-# parameter['crack_horizon_limit_mid'] = 0.0
-# parameter['crack_horizon_limit_top'] = 0.0
-# parameter['crack_vertical_limit_bottom'] = 0.0
-# parameter['crack_vertical_limit_mid'] = 0.5
-# parameter['crack_vertical_limit_top'] = 1.0
-# parameter['crack_node_left'] = 149
-# parameter['crack_node_right'] = 150
-
-# excavation=21
-# parameter['max_excavation_horizon_limit'] = 10.5
-# parameter['min_execavation_horizon_limit'] = -10.5
-# parameter['crack_horizon_limit_bottom'] = 0.0
-# parameter['crack_horizon_limit_mid'] = 0.0
-# parameter['crack_horizon_limit_top'] = 0.0
-# parameter['crack_vertical_limit_bottom'] = 0.0
-# parameter['crack_vertical_limit_mid'] = 0.5
-# parameter['crack_vertical_limit_top'] = 1.0
-# parameter['crack_node_left'] = 152
-# parameter['crack_node_right'] = 153
-
-
-# excavation=23
-# parameter['max_excavation_horizon_limit'] = 11.5
-# parameter['min_execavation_horizon_limit'] = -11.5
-# parameter['crack_horizon_limit'] = 0.0
-# parameter['crack_node_left'] = 155
-# parameter['crack_node_right'] = 156
-
-# excavation=25
-# parameter['max_excavation_horizon_limit'] = 12.5
-# parameter['min_execavation_horizon_limit'] = -12.5
-# parameter['crack_horizon_limit'] = 0.0
-# parameter['crack_node_left'] = 158
-# parameter['crack_node_right'] = 159
-
-
-
-
-
-
-
-# parameter['crack_horizon_limit'] = 1.0
-# parameter['crack_node_left'] = 147
-# parameter['crack_node_right'] = 148
-
-# parameter['crack_horizon_limit'] = 2.0
-# parameter['crack_node_left'] = 148
-# parameter['crack_node_right'] = 149
-
-# parameter['crack_horizon_limit'] = 6.0
-# parameter['crack_node_left'] = 152
-# parameter['crack_node_right'] = 153
 
 
 def pre_process(parameter):
@@ -404,19 +297,19 @@ def pre_process(parameter):
     mdb.models['Model-1'].Gravity(comp2=-10.0, createStepName='gravity', 
         distributionType=UNIFORM, field='', name='gravity', region=
         mdb.models['Model-1'].rootAssembly.sets['gravity'])
-    mdb.models['Model-1'].TabularAmplitude(data=((0.0, 0.0), (25, -200), (50, -250)), name=
+    mdb.models['Model-1'].TabularAmplitude(data=parameter['amp'], name=
         'volumerate', smooth=SOLVER_DEFAULT, timeSpan=STEP)
     mdb.models['Model-1'].rootAssembly.Surface(name='rock-up-bc-edge', side1Edges=
         mdb.models['Model-1'].rootAssembly.instances['rock-1'].edges.findAt(((0.0, 
         0.0, 0.0), )))
     mdb.models['Model-1'].rootAssembly.Set(edges=
         mdb.models['Model-1'].rootAssembly.instances['soil-1'].edges.findAt(((
-        parameter['min_execavation_horizon_limit'], parameter['excavation_bottom']+1, 0.0), )), name='left-prop-edge')
+        parameter['min_excavation_horizon_limit'], parameter['excavation_bottom']+1, 0.0), )), name='left-prop-edge')
     mdb.models['Model-1'].rootAssembly.Set(edges=
         mdb.models['Model-1'].rootAssembly.instances['soil-1'].edges.findAt(((
-        parameter['max_excavation_horizon_limit'],  parameter['excavation_bottom']+1, 0.0), )), name='right-prop-edge')
+        parameter['max_excavation_horizon_limit'], parameter['excavation_bottom']+1, 0.0), )), name='right-prop-edge')
     mdb.models['Model-1'].rootAssembly.Set(edges=
-        mdb.models['Model-1'].rootAssembly.instances['soil-1'].edges.findAt(((parameter['min_execavation_horizon_limit'],
+        mdb.models['Model-1'].rootAssembly.instances['soil-1'].edges.findAt(((parameter['min_excavation_horizon_limit'],
         parameter['max_vertical_limit']-1, 0.0), ), ((0, parameter['excavation_bottom'], 0.0), ), ((parameter['max_excavation_horizon_limit'], parameter['max_vertical_limit']-1, 0.0), ), ((parameter['min_horizon_limit']+1, parameter['max_vertical_limit'],
         0.0), ), ((parameter['max_horizon_limit']-1, parameter['max_vertical_limit'], 0.0), ), ), name='soil-up-after-pore-bc-edge')
     mdb.models['Model-1'].rootAssembly.Set(edges=
@@ -518,11 +411,11 @@ def pre_process(parameter):
         'pore-balance', distributionType=UNIFORM, fieldName='', fixed=OFF, 
         magnitude=0.0, name='after-exe-up-pore-bc', region=
         mdb.models['Model-1'].rootAssembly.sets['soil-up-after-pore-bc-edge'])
-    mdb.models['Model-1'].GeostaticStress(lateralCoeff1=0.7, lateralCoeff2=None, 
+    mdb.models['Model-1'].GeostaticStress(lateralCoeff1=0.35, lateralCoeff2=None, 
         name='geo-soil', region=
         mdb.models['Model-1'].rootAssembly.instances['soil-1'].sets['soil'], 
         stressMag1=0.0, stressMag2=-323200.0, vCoord1=parameter['max_vertical_limit'], vCoord2=parameter['mid_vertical_limit'])
-    mdb.models['Model-1'].GeostaticStress(lateralCoeff1=0.7, lateralCoeff2=None, 
+    mdb.models['Model-1'].GeostaticStress(lateralCoeff1=0.35, lateralCoeff2=None, 
         name='geo-rock', region=
         mdb.models['Model-1'].rootAssembly.instances['rock-1'].sets['rock'], 
         stressMag1=-323200.0, stressMag2=-404000.0, vCoord1=parameter['mid_vertical_limit'], vCoord2=parameter['min_vertical_limit'])
@@ -567,30 +460,6 @@ def pre_process(parameter):
         magnitude=0.0, name='exe-up-pore-bc', region=
         mdb.models['Model-1'].rootAssembly.sets['soil-up-before-pore-bc-edge'])
 
-    # mdb.models['Model-1'].rootAssembly.seedPartInstance(deviationFactor=0.1, 
-    #     minSizeFactor=0.1, regions=(
-    #     mdb.models['Model-1'].rootAssembly.instances['soil-1'], ), size=1.0)
-    # mdb.models['Model-1'].rootAssembly.seedPartInstance(deviationFactor=0.1, 
-    #     minSizeFactor=0.1, regions=(
-    #     mdb.models['Model-1'].rootAssembly.instances['rock-1'], ), size=1.0)
-    # mdb.models['Model-1'].rootAssembly.setMeshControls(algorithm=MEDIAL_AXIS, 
-    #     elemShape=QUAD, regions=
-    #     mdb.models['Model-1'].rootAssembly.instances['soil-1'].faces.findAt(((
-    #     -2.666667, 14.666667, 0.0), ), ((-15.333333, 17.333333, 0.0), ), ))
-    # mdb.models['Model-1'].rootAssembly.setElementType(elemTypes=(ElemType(
-    #     elemCode=CPE4P, elemLibrary=STANDARD), ElemType(elemCode=UNKNOWN_TRI, 
-    #     elemLibrary=STANDARD)), regions=(
-    #     mdb.models['Model-1'].rootAssembly.instances['soil-1'].faces.findAt(((
-    #     -2.666667, 14.666667, 0.0), ), ((-15.333333, 17.333333, 0.0), ), ), ))
-    # mdb.models['Model-1'].rootAssembly.generateMesh(regions=(
-    #     mdb.models['Model-1'].rootAssembly.instances['soil-1'], ))
-    # mdb.models['Model-1'].rootAssembly.setMeshControls(algorithm=MEDIAL_AXIS, 
-    #     elemShape=QUAD, regions=
-    #     mdb.models['Model-1'].rootAssembly.instances['rock-1'].faces.findAt(((10.0, 
-    #     -1.666667, 0.0), )))
-    # mdb.models['Model-1'].rootAssembly.generateMesh(regions=(
-    #     mdb.models['Model-1'].rootAssembly.instances['rock-1'], ))
-
     mdb.models['Model-1'].rootAssembly.seedPartInstance(deviationFactor=0.1, 
         minSizeFactor=0.1, regions=(
         mdb.models['Model-1'].rootAssembly.instances['soil-1'], ), size=1.0)
@@ -604,7 +473,7 @@ def pre_process(parameter):
         -2.833333, 12.0, 0.0), ), ((-19.5, 16.0, 0.0), ), ), ))
     mdb.models['Model-1'].rootAssembly.seedPartInstance(deviationFactor=0.1, 
         minSizeFactor=0.1, regions=(
-        mdb.models['Model-1'].rootAssembly.instances['rock-1'], ), size=2.0)
+        mdb.models['Model-1'].rootAssembly.instances['rock-1'], ), size=1.0)
     mdb.models['Model-1'].rootAssembly.setMeshControls(algorithm=MEDIAL_AXIS, elemShape=QUAD, regions=
         mdb.models['Model-1'].rootAssembly.instances['rock-1'].faces.findAt(((
         13.833333, -1.666667, 0.0), )))
@@ -628,32 +497,32 @@ def pre_process(parameter):
     #     region=mdb.models['Model-1'].rootAssembly.surfaces['penetration-surface'])
     xfem_eall = mdb.models['Model-1'].rootAssembly.instances['soil-1'].elements
     mdb.models['Model-1'].rootAssembly.Set(name="xfem-ele-set", elements=xfem_eall)
-    mdb.Job(activateLoadBalancing=False, atTime=None, contactPrint=OFF, 
-        description='', echoPrint=OFF, explicitPrecision=SINGLE, 
-        getMemoryFromAnalysis=True, historyPrint=OFF, memory=90, memoryUnits=
-        PERCENTAGE, model='Model-1', modelPrint=OFF, multiprocessingMode=DEFAULT, 
-        name='Job-centrifuge', nodalOutputPrecision=SINGLE, numCpus=1, numDomains=1, 
-        numGPUs=0, parallelizationMethodExplicit=DOMAIN, queue=None, resultsFormat=
-        ODB, scratch='', type=ANALYSIS, userSubroutine='', waitHours=0, 
-        waitMinutes=0)
-    mdb.jobs['Job-centrifuge'].writeInput(consistencyChecking=OFF)
-    PYXFEM.modify_inp(parameter['crack_node_left'], parameter['crack_node_right'], parameter['flow_rate'], in_inp_path, out_inp_path)
+    # mdb.Job(activateLoadBalancing=False, atTime=None, contactPrint=OFF, 
+    #     description='', echoPrint=OFF, explicitPrecision=SINGLE, 
+    #     getMemoryFromAnalysis=True, historyPrint=OFF, memory=90, memoryUnits=
+    #     PERCENTAGE, model='Model-1', modelPrint=OFF, multiprocessingMode=DEFAULT, 
+    #     name='Job-centrifuge', nodalOutputPrecision=SINGLE, numCpus=1, numDomains=1, 
+    #     numGPUs=0, parallelizationMethodExplicit=DOMAIN, queue=None, resultsFormat=
+    #     ODB, scratch='', type=ANALYSIS, userSubroutine='', waitHours=0, 
+    #     waitMinutes=0)
+    # mdb.jobs['Job-centrifuge'].writeInput(consistencyChecking=OFF)
+    # PYXFEM.modify_inp(parameter['crack_node_left'], parameter['crack_node_right'], parameter['flow_rate'], in_inp_path, out_inp_path)
 
-    now = datetime.datetime.now()
-    job_name = "Centrifuge-{}".format(now.strftime("%Y-%m-%d-%H-%M"))
+    # now = datetime.datetime.now()
+    # job_name = "Centrifuge-{}".format(now.strftime("%Y-%m-%d-%H-%M"))
 
-    mdb.JobFromInputFile(atTime=None, explicitPrecision=SINGLE, 
-        getMemoryFromAnalysis=True, inputFileName=
-        out_inp_path, memory=90, 
-        memoryUnits=PERCENTAGE, multiprocessingMode=DEFAULT, name=
-        job_name, nodalOutputPrecision=SINGLE, numCpus=1, numGPUs=0, 
-        queue=None, resultsFormat=ODB, scratch='', type=ANALYSIS, userSubroutine=''
-        , waitHours=0, waitMinutes=0)
-    mdb.jobs[job_name].submit(consistencyChecking=OFF)
-    del mdb.jobs['Job-centrifuge']
-    mdb.jobs[job_name].waitForCompletion()
-    return job_name
-
+    # mdb.JobFromInputFile(atTime=None, explicitPrecision=SINGLE, 
+    #     getMemoryFromAnalysis=True, inputFileName=
+    #     out_inp_path, memory=90, 
+    #     memoryUnits=PERCENTAGE, multiprocessingMode=DEFAULT, name=
+    #     job_name, nodalOutputPrecision=SINGLE, numCpus=1, numGPUs=0, 
+    #     queue=None, resultsFormat=ODB, scratch='', type=ANALYSIS, userSubroutine=''
+    #     , waitHours=0, waitMinutes=0)
+    # mdb.jobs[job_name].submit(consistencyChecking=OFF)
+    # del mdb.jobs['Job-centrifuge']
+    # mdb.jobs[job_name].waitForCompletion()
+    return "hello"
+    
 def clear_results(job_name):
     suffixs = [".com", ".dat", ".ipm", ".log", ".mdl", ".msg", ".prt", ".sim", ".sta", ".stt"]
     for item in suffixs:
@@ -664,16 +533,6 @@ def clear_results(job_name):
                 os.remove(full_path)
             except WindowsError:
                 pass
-    if os.path.exists(in_inp_path):
-        try:
-            os.remove(in_inp_path)
-        except WindowsError:
-            pass
-    if os.path.exists(out_inp_path):
-        try:
-            os.remove(out_inp_path)
-        except WindowsError:
-            pass
     return None
 
 def post_process(odb_name, query_variable):
@@ -683,81 +542,22 @@ def post_process(odb_name, query_variable):
     session.viewports['Viewport: 1'].setValues(displayedObject=o)
     session.viewports[session.currentViewportName].odbDisplay.setFrame(
     step='injection', frame=93)
-    # leaf = dgo.LeafFromNodeSets(nodeSets=('EXCAVATION-FACE', 
-    # ))
-    # print(leaf.__doc__)
-    # print(dir(leaf))
-    # print(len(leaf.nodeSets[0]))
-    # for item in leaf.nodeSets[0]:
-    #     print(item)
     ra = odb.rootAssembly
-    # print(dir(ra))
     nodeSets = ra.nodeSets
-    # print(len(ns))
     target_ns = nodeSets["addedNX_XFEM+001ASSEMBLY_SOIL-1_SOIL"]
     node_0 = target_ns.nodes[0]
     for item in node_0:
         print(item)
 
 
-    # for item in nodes:
-    #     print(item)
-    # xy_data = session.xyDataListFromField(odb=odb, outputPosition=NODAL, variable=((
-    # 'PFOPENXFEM', WHOLE_ELEMENT), ), nodeLabels=(('SOIL-1', ('146')), ))
-    # print("XYdata created succeed!")
-    # x_data = [item[0] for item in xy_data[0]]
-    # y_data = [item[1] for item in xy_data[0]]
-    # with open("D:\\thesis\\mini-thesis\\py_thesis\\data\\abqus_script_result\\x_{}.txt".format(odb_name), "w") as f_x:
-    #     for item in x_data:
-    #         f_x.write(str(item)+"\n")
-    # with open("D:\\thesis\\mini-thesis\\py_thesis\\data\\abqus_script_result\\y_{}.txt".format(odb_name), "w") as f_y:
-    #     for item in y_data:
-    #         f_y.write(str(item)+"\n")
-    # return x_data, y_data
 
 
 if __name__ == "__main__":
-    # excavation=15
-    parameter_1 = dict()
-    parameter_1['max_horizon_limit'] = 41.5
-    parameter_1['mid_horizon_limit'] = 0.0
-    parameter_1['min_horizon_limit'] = -41.5
-    parameter_1['max_vertical_limit'] = 20.0
-    parameter_1['mid_vertical_limit'] = 0.0
-    parameter_1['min_vertical_limit'] = -5.0
-    parameter_1['excavation_bottom'] = 12.0
-    parameter_1['max_excavation_vertical_limit'] = 10.0
-    parameter_1['min_excavation_vertical_limit'] = 2.0
-    parameter_1['flow_rate'] = 5e-5
-
-    parameter_1['max_excavation_horizon_limit'] = 7.5
-    parameter_1['min_execavation_horizon_limit'] = -7.5
-    parameter_1['crack_horizon_limit_bottom'] = 0.0
-    parameter_1['crack_horizon_limit_mid'] = 0.0
-    parameter_1['crack_horizon_limit_top'] = 0.0
-    parameter_1['crack_vertical_limit_bottom'] = 0.0
-    parameter_1['crack_vertical_limit_mid'] = 0.5
-    parameter_1['crack_vertical_limit_top'] = 1.0
-    parameter_1['crack_node_left'] = 143
-    parameter_1['crack_node_right'] = 144
-
-    # parameter_1['max_excavation_horizon_limit'] = 7.5
-    # parameter_1['min_execavation_horizon_limit'] = -7.5
-    # parameter_1['crack_horizon_limit_bottom'] = 25
-    # parameter_1['crack_horizon_limit_mid'] = 25
-    # parameter_1['crack_horizon_limit_top'] = 25
-    # parameter_1['crack_vertical_limit_bottom'] = 0
-    # parameter_1['crack_vertical_limit_mid'] = 0.5
-    # parameter_1['crack_vertical_limit_top'] = 1.0
-    # parameter_1['crack_node_left'] = 168
-    # parameter_1['crack_node_right'] = 1
-
-
-    # # excavation=17
+    # # excavation=37
     parameter_2 = dict()
-    parameter_2['max_horizon_limit'] = 41.5
+    parameter_2['max_horizon_limit'] = 51.5
     parameter_2['mid_horizon_limit'] = 0.0
-    parameter_2['min_horizon_limit'] = -41.5
+    parameter_2['min_horizon_limit'] = -51.5
     parameter_2['max_vertical_limit'] = 20.0
     parameter_2['mid_vertical_limit'] = 0.0
     parameter_2['min_vertical_limit'] = -5.0
@@ -765,69 +565,28 @@ if __name__ == "__main__":
     parameter_2['max_excavation_vertical_limit'] = 10.0
     parameter_2['min_excavation_vertical_limit'] = 2.0
     parameter_2['flow_rate'] = 5e-5
-    parameter_2['poson'] = 0.30
-    parameter_2['max_excavation_horizon_limit'] = 8.5
-    parameter_2['min_execavation_horizon_limit'] = -8.5
-    parameter_2['crack_horizon_limit_bottom'] = 5.0
-    parameter_2['crack_horizon_limit_mid'] = 5.0
-    parameter_2['crack_horizon_limit_top'] = 5.0
+    parameter_2['poson'] = 0.3
+    parameter_2['amp'] = ((0.0, 0.0), (25, -100), (100, -100))
+    parameter_2['max_excavation_horizon_limit'] = 18.5
+    parameter_2['min_excavation_horizon_limit'] = -18.5
+    # parameter_2['crack_horizon_limit_bottom'] = 20.0
+    # parameter_2['crack_horizon_limit_mid'] = 20.0
+    # parameter_2['crack_horizon_limit_top'] = 20.0
+    # parameter_2['crack_vertical_limit_bottom'] = 0.0
+    # parameter_2['crack_vertical_limit_mid'] = 0.5
+    # parameter_2['crack_vertical_limit_top'] = 1.0
+    # parameter_2['crack_node_left'] = 216
+    # parameter_2['crack_node_right'] = 217
+    parameter_2['crack_horizon_limit_bottom'] = 17.0
+    parameter_2['crack_horizon_limit_mid'] = 17.0
+    parameter_2['crack_horizon_limit_top'] = 17.0
     parameter_2['crack_vertical_limit_bottom'] = 0.0
     parameter_2['crack_vertical_limit_mid'] = 0.5
     parameter_2['crack_vertical_limit_top'] = 1.0
-    parameter_2['crack_node_left'] = 151
-    parameter_2['crack_node_right'] = 152
+    parameter_2['crack_node_left'] = 213
+    parameter_2['crack_node_right'] = 214
 
-    # # excavation=19
-    parameter_3 = dict()
-    parameter_3['max_horizon_limit'] = 41.5
-    parameter_3['mid_horizon_limit'] = 0.0
-    parameter_3['min_horizon_limit'] = -41.5
-    parameter_3['max_vertical_limit'] = 20.0
-    parameter_3['mid_vertical_limit'] = 0.0
-    parameter_3['min_vertical_limit'] = -5.0
-    parameter_3['excavation_bottom'] = 12.0
-    parameter_3['max_excavation_vertical_limit'] = 10.0
-    parameter_3['min_excavation_vertical_limit'] = 2.0
-    parameter_3['flow_rate'] = 5e-5
-    parameter_3['max_excavation_horizon_limit'] = 9.5
-    parameter_3['min_execavation_horizon_limit'] = -9.5
-    parameter_3['crack_horizon_limit_bottom'] = 0.0
-    parameter_3['crack_horizon_limit_mid'] = 0.0
-    parameter_3['crack_horizon_limit_top'] = 0.0
-    parameter_3['crack_vertical_limit_bottom'] = 0.0
-    parameter_3['crack_vertical_limit_mid'] = 0.5
-    parameter_3['crack_vertical_limit_top'] = 1.0
-    parameter_3['crack_node_left'] = 149
-    parameter_3['crack_node_right'] = 150
 
-    # # excavation=21
-    parameter_4 = dict()
-    parameter_4['max_horizon_limit'] = 41.5
-    parameter_4['mid_horizon_limit'] = 0.0
-    parameter_4['min_horizon_limit'] = -41.5
-    parameter_4['max_vertical_limit'] = 20.0
-    parameter_4['mid_vertical_limit'] = 0.0
-    parameter_4['min_vertical_limit'] = -5.0
-    parameter_4['excavation_bottom'] = 12.0
-    parameter_4['max_excavation_vertical_limit'] = 10.0
-    parameter_4['min_excavation_vertical_limit'] = 2.0
-    parameter_4['flow_rate'] = 5e-5
-    parameter_4['max_excavation_horizon_limit'] = 10.5
-    parameter_4['min_execavation_horizon_limit'] = -10.5
-    parameter_4['crack_horizon_limit_bottom'] = 6.0
-    parameter_4['crack_horizon_limit_mid'] = 6.0
-    parameter_4['crack_horizon_limit_top'] = 6.0
-    parameter_4['crack_vertical_limit_bottom'] = 0.0
-    parameter_4['crack_vertical_limit_mid'] = 0.5
-    parameter_4['crack_vertical_limit_top'] = 1.0
-    parameter_4['crack_node_left'] = 152
-    parameter_4['crack_node_right'] = 153
-
-    # parameters = [parameter_1, parameter_2, parameter_3, parameter_4]
-    # for param in parameters:
-    #     job_name = pre_process(param)
-    #     clear_results(job_name)
-    # post_process(job_name, "PHILSM")
     job_name = pre_process(parameter_2)
     clear_results(job_name)
 
