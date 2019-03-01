@@ -313,19 +313,20 @@ mdb.models['Model-1'].parts['clay'].Set(faces=
     (pile_top_vertical_limit+clay_top_vertical_limit)/2, 0.0), ), (((pile_right_horizon_limit+wall_left_horizon_limit)/2, pile_top_vertical_limit/2, 0.0), ), (((wall_right_horizon_limit+clay_right_horizon_limit)/2, (wall_bottom_vertical_limit+clay_top_vertical_limit)/2, 0.0), ), 
     (((wall_left_horizon_limit+wall_right_horizon_limit)/2, wall_bottom_vertical_limit/2, 0.0), ), (((wall_right_horizon_limit+clay_right_horizon_limit)/2, wall_bottom_vertical_limit/2, 0.0), ), ), name=
     'clay')
+# mdb.models['Model-1'].parts['clay'].Set(edges=
+#     mdb.models['Model-1'].parts['clay'].edges.findAt(((0.0, pile_top_vertical_limit/2, 0.0), ), ((
+#     0.0, (pile_top_vertical_limit+clay_top_vertical_limit)/2, 0.0), ), ), name='left_bc')
+# mdb.models['Model-1'].parts['clay'].Set(edges=
+#     mdb.models['Model-1'].parts['clay'].edges.findAt(((clay_right_horizon_limit, (clay_top_vertical_limit+wall_bottom_vertical_limit)/2, 0.0), ), ((
+#     clay_right_horizon_limit, wall_bottom_vertical_limit/2, 0.0), ), ), name='right_bc')
 mdb.models['Model-1'].parts['clay'].Set(edges=
-    mdb.models['Model-1'].parts['clay'].edges.findAt(((0.0, pile_top_vertical_limit/2, 0.0), ), ((
-    0.0, (pile_top_vertical_limit+clay_top_vertical_limit)/2, 0.0), ), ), name='left_bc')
-mdb.models['Model-1'].parts['clay'].Set(edges=
-    mdb.models['Model-1'].parts['clay'].edges.findAt(((clay_right_horizon_limit, (clay_top_vertical_limit+wall_bottom_vertical_limit)/2, 0.0), ), ((
-    clay_right_horizon_limit, wall_bottom_vertical_limit/2, 0.0), ), ), name='right_bc')
+    mdb.models['Model-1'].parts['clay'].edges.findAt(((0.0, (pile_top_vertical_limit+clay_top_vertical_limit)/2, 0.0), ), ((
+    clay_right_horizon_limit, (clay_top_vertical_limit+wall_bottom_vertical_limit)/2, 0.0), ), ((clay_right_horizon_limit, wall_bottom_vertical_limit/2, 0.0), ), ((0.0, pile_top_vertical_limit/2, 0.0), ), ), name=
+    'clay_horizon_bc_edge')
 mdb.models['Model-1'].parts['clay'].Set(edges=
     mdb.models['Model-1'].parts['clay'].edges.findAt(((pile_left_horizon_limit/2, 0.0, 0.0), ), ((
     (pile_right_horizon_limit+wall_left_horizon_limit)/2, 0.0, 0.0), ), (((wall_left_horizon_limit+wall_right_horizon_limit)/2, 0.0, 0.0), ), (((wall_right_horizon_limit+clay_right_horizon_limit)/2, 0.0, 0.0), ), ), 
     name='bottom_bc')
-mdb.models['Model-1'].parts['clay'].Set(edges=
-    mdb.models['Model-1'].parts['clay'].edges.findAt(((pile_left_horizon_limit, pile_top_vertical_limit/2, 0.0), ), ((
-    pile_right_horizon_limit, pile_top_vertical_limit/2, 0.0), ), ), name='pile_int_lateral')
 mdb.models['Model-1'].parts['clay'].Set(edges=
     mdb.models['Model-1'].parts['clay'].edges.findAt(((pile_left_horizon_limit/2, wall_mid_vertical_limit, 0.0), ), ((
     pile_left_horizon_limit/2, 0.0, 0.0), ), ((pile_left_horizon_limit/2, clay_top_vertical_limit, 0.0), ), (((pile_right_horizon_limit+wall_left_horizon_limit)/2, wall_mid_vertical_limit, 0.0), ), ((
@@ -345,13 +346,13 @@ mdb.models['Model-1'].parts['clay'].Surface(name='pile_int', side1Edges=
     (pile_left_horizon_limit+pile_right_horizon_limit)/2, pile_top_vertical_limit, 0.0), ), ((pile_right_horizon_limit, pile_top_vertical_limit/2, 0.0), ), ))
 mdb.models['Model-1'].parts['clay'].Set(edges=
     mdb.models['Model-1'].parts['clay'].edges.findAt(((wall_left_horizon_limit, (wall_mid_vertical_limit+clay_top_vertical_limit)/2, 0.0), ), ((
-    wall_left_horizon_limit, (wall_mid_vertical_limit+wall_bottom_vertical_limit)/2, 0.0), ), ((wall_right_horizon_limit, (wall_mid_vertical_limit+wall_bottom_vertical_limit)/2, 0.0), ),),name='clay_lateral')
+    wall_left_horizon_limit, (wall_mid_vertical_limit+wall_bottom_vertical_limit)/2, 0.0), ), ((wall_right_horizon_limit, (wall_mid_vertical_limit+wall_bottom_vertical_limit)/2, 0.0), ),),name='clay_wall_lateral')
 mdb.models['Model-1'].parts['clay'].Set(edges=
     mdb.models['Model-1'].parts['clay'].edges.findAt((((wall_left_horizon_limit+wall_right_horizon_limit)/2, wall_bottom_vertical_limit, 0.0), )), 
     name='wall_bottom')
 mdb.models['Model-1'].parts['clay'].Set(edges=
     mdb.models['Model-1'].parts['clay'].edges.findAt(((pile_left_horizon_limit, pile_top_vertical_limit/2, 0.0), ), ((
-    pile_right_horizon_limit, pile_top_vertical_limit/2, 0.0), ), ), name='pile_lateral')
+    pile_right_horizon_limit, pile_top_vertical_limit/2, 0.0), ), ), name='clay_pile_int_lateral')
 pile_datum_0 = mdb.models['Model-1'].parts['pile'].DatumPointByCoordinate(coords=(pile_left_horizon_limit, pile_mid_vertical_limit, 
     0.0))
 pile_datum_1 = mdb.models['Model-1'].parts['pile'].DatumPointByCoordinate(coords=(pile_right_horizon_limit, pile_mid_vertical_limit, 
@@ -365,7 +366,7 @@ mdb.models['Model-1'].parts['pile'].Set(faces=
     ), (((pile_left_horizon_limit+pile_right_horizon_limit)/2, pile_top_vertical_limit/2, 0.0), ), ), name='pile')
 mdb.models['Model-1'].parts['pile'].Set(edges=
     mdb.models['Model-1'].parts['pile'].edges.findAt(((pile_right_horizon_limit, pile_top_vertical_limit/2, 0.0), ), ((
-    pile_left_horizon_limit, pile_top_vertical_limit/2, 0.0), ), ), name='pile_int_lateral')
+    pile_left_horizon_limit, pile_top_vertical_limit/2, 0.0), ), ), name='pile_clay_int_lateral')
 mdb.models['Model-1'].parts['pile'].Set(edges=
     mdb.models['Model-1'].parts['pile'].edges.findAt(((pile_left_horizon_limit, pile_bottom_vertical_limit/2, 0.0), ), ((
     pile_right_horizon_limit, pile_bottom_vertical_limit/2, 0.0), ), ), name='pile_no_int_lateral')
@@ -540,16 +541,21 @@ mdb.models['Model-1'].rootAssembly.Set(edges=
 mdb.models['Model-1'].Gravity(comp2=-clay_top_vertical_limit/2, createStepName='gravity', 
     distributionType=UNIFORM, field='', name='gravity', region=
     mdb.models['Model-1'].rootAssembly.sets['manual_whole'])
+# mdb.models['Model-1'].DisplacementBC(amplitude=UNSET, createStepName='gravity', 
+#     distributionType=UNIFORM, fieldName='', fixed=OFF, localCsys=None, name=
+#     'left_bc', region=
+#     mdb.models['Model-1'].rootAssembly.instances['clay-1'].sets['left_bc'], u1=
+#     0.0, u2=UNSET, ur3=UNSET)
+# mdb.models['Model-1'].DisplacementBC(amplitude=UNSET, createStepName='gravity', 
+#     distributionType=UNIFORM, fieldName='', fixed=OFF, localCsys=None, name=
+#     'right_bc', region=
+#     mdb.models['Model-1'].rootAssembly.instances['clay-1'].sets['right_bc'], 
+#     u1=0.0, u2=UNSET, ur3=UNSET)
 mdb.models['Model-1'].DisplacementBC(amplitude=UNSET, createStepName='gravity', 
     distributionType=UNIFORM, fieldName='', fixed=OFF, localCsys=None, name=
-    'left_bc', region=
-    mdb.models['Model-1'].rootAssembly.instances['clay-1'].sets['left_bc'], u1=
+    'clay_horizon_bc', region=
+    mdb.models['Model-1'].rootAssembly.instances['clay-1'].sets['clay_horizon_bc_edge'], u1=
     0.0, u2=UNSET, ur3=UNSET)
-mdb.models['Model-1'].DisplacementBC(amplitude=UNSET, createStepName='gravity', 
-    distributionType=UNIFORM, fieldName='', fixed=OFF, localCsys=None, name=
-    'right_bc', region=
-    mdb.models['Model-1'].rootAssembly.instances['clay-1'].sets['right_bc'], 
-    u1=0.0, u2=UNSET, ur3=UNSET)
 mdb.models['Model-1'].DisplacementBC(amplitude=UNSET, createStepName='gravity', 
     distributionType=UNIFORM, fieldName='', fixed=OFF, localCsys=None, name=
     'bottom_bc', region=
@@ -573,7 +579,7 @@ mdb.models['Model-1'].DisplacementBC(amplitude=UNSET, createStepName='gravity',
 mdb.models['Model-1'].DisplacementBC(amplitude=UNSET, createStepName='gravity', 
     distributionType=UNIFORM, fieldName='', fixed=OFF, localCsys=None, name=
     'pile_int_lateral', region=
-    mdb.models['Model-1'].rootAssembly.instances['pile-1'].sets['pile_int_lateral']
+    mdb.models['Model-1'].rootAssembly.instances['pile-1'].sets['pile_clay_int_lateral']
     , u1=0.0, u2=UNSET, ur3=UNSET)
 mdb.models['Model-1'].DisplacementBC(amplitude=UNSET, createStepName='gravity', 
     distributionType=UNIFORM, fieldName='', fixed=OFF, localCsys=None, name=
@@ -643,7 +649,7 @@ mdb.models['Model-1'].steps['gravity'].setValues(matrixSolver=DIRECT,
 mdb.models['Model-1'].DisplacementBC(amplitude=UNSET, createStepName='gravity', 
     distributionType=UNIFORM, fieldName='', fixed=OFF, localCsys=None, name=
     'clay_wall_lateral', region=
-    mdb.models['Model-1'].rootAssembly.instances['clay-1'].sets['clay_lateral']
+    mdb.models['Model-1'].rootAssembly.instances['clay-1'].sets['clay_wall_lateral']
     , u1=0.0, u2=UNSET, ur3=UNSET)
 mdb.models['Model-1'].DisplacementBC(amplitude=UNSET, createStepName='gravity', 
     distributionType=UNIFORM, fieldName='', fixed=OFF, localCsys=None, name=
@@ -652,8 +658,8 @@ mdb.models['Model-1'].DisplacementBC(amplitude=UNSET, createStepName='gravity',
     u1=UNSET, u2=0.0, ur3=UNSET)
 mdb.models['Model-1'].DisplacementBC(amplitude=UNSET, createStepName='gravity', 
     distributionType=UNIFORM, fieldName='', fixed=OFF, localCsys=None, name=
-    'clay_pile_lateral', region=
-    mdb.models['Model-1'].rootAssembly.instances['clay-1'].sets['pile_lateral']
+    'clay_pile_int_lateral_bc', region=
+    mdb.models['Model-1'].rootAssembly.instances['clay-1'].sets['clay_pile_int_lateral']
     , u1=0.0, u2=UNSET, ur3=UNSET)
 mdb.models['Model-1'].boundaryConditions['wall_bottom'].deactivate(
     'release_wall')
@@ -662,7 +668,7 @@ mdb.models['Model-1'].boundaryConditions['wall_lateral'].deactivate(
 mdb.models['Model-1'].boundaryConditions['pile_int_lateral'].deactivate(
     'release_pile')
 mdb.models['Model-1'].boundaryConditions['wall_bottom'].reset('release_wall')
-mdb.models['Model-1'].boundaryConditions['clay_pile_lateral'].deactivate(
+mdb.models['Model-1'].boundaryConditions['clay_pile_int_lateral_bc'].deactivate(
     'release_pile')
 mdb.models['Model-1'].boundaryConditions['clay_wall_bottom'].deactivate(
     'release_wall')
