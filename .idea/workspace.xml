@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9ff1c257-fb1a-4373-9cf6-85667ac160a8" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/abaqus_intern_script/centrifuge-wall-pile-standard.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/abaqus_intern_script/centrifuge-wall-pile-standard.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -23,22 +22,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="graph.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/graph.py">
+      <file leaf-file-name="wider_excavation.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/abaqus_intern_script/wider_excavation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-6217">
-              <caret line="2" selection-start-line="2" selection-end-line="12" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="crack_length.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/crack_length.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+            <state relative-caret-position="-741">
               <folding>
-                <element signature="e#0#19#0" expanded="true" />
+                <element signature="e#23#41#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -132,8 +121,8 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="315" />
-    <option name="y" value="58" />
+    <option name="x" value="90" />
+    <option name="y" value="32" />
     <option name="width" value="1866" />
     <option name="height" value="1047" />
   </component>
@@ -156,7 +145,24 @@
             <path>
               <item name="py_thesis" type="b2602c69:ProjectViewProjectNode" />
               <item name="py_thesis" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="py_thesis" type="b2602c69:ProjectViewProjectNode" />
+              <item name="py_thesis" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="leakoff" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="py_thesis" type="b2602c69:ProjectViewProjectNode" />
+              <item name="py_thesis" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="py_thesis" type="b2602c69:ProjectViewProjectNode" />
+              <item name="py_thesis" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="abaqus_intern_script" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -326,7 +332,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="13" y="0" width="1866" height="1047" extended-state="1" />
+    <frame x="90" y="32" width="1866" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -334,7 +340,7 @@
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.4351064" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.44575724" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.44575724" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.32972974" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
@@ -355,24 +361,24 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2421875" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.39086294" />
-      <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.36025506" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Terminal" order="11" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" x="1135" y="263" width="516" height="333" id="SciView" order="4" visible="true" weight="0.12760417" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.38215104" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="10" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -394,20 +400,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/data/size-effect/open_size/size_time_2049.csv">
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="740">
-          <caret line="194" selection-start-line="194" selection-end-line="194" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/size-effect/open_size/size_size_2049.csv">
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="740">
-          <caret line="194" selection-start-line="194" selection-end-line="194" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/size-effect/open_size/size_time_2051.csv">
       <provider selected="true" editor-type-id="csv-text-editor">
         <state relative-caret-position="740">
@@ -612,9 +604,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
           <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -657,16 +646,25 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
           <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/data/leakoff/middle_crack_size_size_1.csv">
+      <provider selected="true" editor-type-id="csv-text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/graph.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6217">
+        <state relative-caret-position="-494">
           <caret line="2" selection-start-line="2" selection-end-line="12" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/abaqus_intern_script/wider_excavation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-741">
+          <folding>
+            <element signature="e#23#41#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
