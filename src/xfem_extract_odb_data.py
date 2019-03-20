@@ -12,7 +12,7 @@ csv_base_path = r"C:/Users/augustus/OneDrive - jiangxubin/model/base"
 def extract_frame_data(frame, target_set):
 	frame = odb.steps['injection'].frames[frame]
 	# print(frame.frameValue)
-	variable_data = frame.fieldOutputs['PORPRES']
+	variable_data = frame.fieldOutputs['PFOPENXFEMCOMP1']
 	target_data = variable_data.getSubset(region=target_set)
 	label = [item.elementLabel for item in target_data.values]
 	value = [item.data for item in target_data.values]
@@ -26,12 +26,12 @@ def extract_frame_data(frame, target_set):
 
 
 if __name__ == "__main__":
-	for i in range(1,7):
-		odb_path = r'C:/Users/augustus/OneDrive - jiangxubin/model/excavation/Job-test-excavation-{}-1.odb'.format(i)
-		csv_fw = open(r"C:/Users/augustus/OneDrive - jiangxubin/model/base/porpresa-{}.csv".format(i), "w")
+	for i in range(1,16):
+		odb_path = r'C:/Users/augustus/OneDrive - jiangxubin/model/standard/standard-pore/Job-test-9-{}.odb'.format(i)
+		csv_fw = open(r"C:/Users/augustus/OneDrive - jiangxubin/model/base/viscosity/viscosity-PF{}.csv".format(i), "w")
 		csv_writer = csv.writer(csv_fw, delimiter= ',', lineterminator='\n')
 		odb = session.openOdb(name=odb_path)
-		element_labels = (16, 47, 78, 109, 140, 171, 202, 233, 264, 295)
+		element_labels = (16, 47, 78, 109, 140, 171, 202, 233, 264, 295,357,388,419,450,481,512,543,574,605,636,667,698,729,760,822)
 		target_set = odb.rootAssembly.instances['SOIL-1'].ElementSetFromElementLabels(name="target_set", elementLabels=(element_labels))
 		# label, value = extract_frame_data(94, target_set)
 		for index in list(range(1, 101)):

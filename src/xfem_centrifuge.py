@@ -19,13 +19,13 @@ horizon_left_limit = 0
 vertical_up_limit = 20
 vertical_mid_limit = 0
 vertical_bottom_limit = -5
-wall_horizon_left_limit = 8
-wall_horizon_right_limit = 8.5
+wall_horizon_left_limit = 48
+wall_horizon_right_limit = 48.5
 wall_vertical_bottom_limit = 5.0
 excava_vertical_limit_3 = 12.0
 excava_vertical_limit_2 = 15.0
 excava_vertical_limit_1 = 18.0
-crack_horizon_limit = 9.0
+crack_horizon_limit = 46.5
 crack_bottom_limit = 0.0
 crack_top_limit = 1.0
 
@@ -262,25 +262,33 @@ mdb.models['Model-1'].Part(dimensionality=TWO_D_PLANAR, name='wall', type=
 mdb.models['Model-1'].parts['wall'].BaseShell(sketch=
     mdb.models['Model-1'].sketches['__profile__'])
 del mdb.models['Model-1'].sketches['__profile__']
-mdb.models['Model-1'].parts['up-soil'].DatumPointByCoordinate(coords=(wall_horizon_right_limit, 
+dt_a = mdb.models['Model-1'].parts['up-soil'].DatumPointByCoordinate(coords=(wall_horizon_right_limit, 
     excava_vertical_limit_3, 0.0))
-mdb.models['Model-1'].parts['up-soil'].DatumPointByCoordinate(coords=(wall_horizon_left_limit, 
+print("a",dt_a.id)
+dt_b = mdb.models['Model-1'].parts['up-soil'].DatumPointByCoordinate(coords=(wall_horizon_left_limit, 
     excava_vertical_limit_3, 0.0))
+print("b",dt_b.id)
 del mdb.models['Model-1'].parts['up-soil'].features['Datum pt-1']
-mdb.models['Model-1'].parts['up-soil'].DatumPointByCoordinate(coords=(0.0, 
+dt_c = mdb.models['Model-1'].parts['up-soil'].DatumPointByCoordinate(coords=(0.0, 
     excava_vertical_limit_3, 0.0))
-mdb.models['Model-1'].parts['up-soil'].DatumPointByCoordinate(coords=(wall_horizon_left_limit, 0.0, 
+print("c",dt_c.id)
+dt_d = mdb.models['Model-1'].parts['up-soil'].DatumPointByCoordinate(coords=(wall_horizon_left_limit, 0.0, 
     0.0))
-mdb.models['Model-1'].parts['up-soil'].DatumPointByCoordinate(coords=(wall_horizon_right_limit, 0.0, 
+print("d",dt_d.id)
+dt_e = mdb.models['Model-1'].parts['up-soil'].DatumPointByCoordinate(coords=(wall_horizon_right_limit, 0.0, 
     0.0))
-mdb.models['Model-1'].parts['up-soil'].DatumPointByCoordinate(coords=(wall_horizon_left_limit, wall_vertical_bottom_limit, 
+print("e",dt_e.id)
+dt_f = mdb.models['Model-1'].parts['up-soil'].DatumPointByCoordinate(coords=(wall_horizon_left_limit, wall_vertical_bottom_limit, 
     0.0))
-mdb.models['Model-1'].parts['up-soil'].DatumPointByCoordinate(coords=(wall_horizon_right_limit, wall_vertical_bottom_limit, 
+print("f",dt_f.id)
+dt_g = mdb.models['Model-1'].parts['up-soil'].DatumPointByCoordinate(coords=(wall_horizon_right_limit, wall_vertical_bottom_limit, 
     0.0))
-mdb.models['Model-1'].parts['up-soil'].DatumPointByCoordinate(coords=(horizon_right_limit, 
+print("g",dt_g.id)
+dt_h = mdb.models['Model-1'].parts['up-soil'].DatumPointByCoordinate(coords=(horizon_right_limit, 
     wall_vertical_bottom_limit, 0.0))
+print("h",dt_h.id)
 mdb.models['Model-1'].parts['up-soil'].PartitionFaceByShortestPath(faces=
-    mdb.models['Model-1'].parts['up-soil'].faces.findAt(((58.5/2, wall_vertical_bottom_limit/2, 
+    mdb.models['Model-1'].parts['up-soil'].faces.findAt((((wall_horizon_right_limit+horizon_right_limit)/2, wall_vertical_bottom_limit/2, 
     0.0), )), point1=mdb.models['Model-1'].parts['up-soil'].datums[4], point2=
     mdb.models['Model-1'].parts['up-soil'].datums[3])
 mdb.models['Model-1'].parts['up-soil'].PartitionFaceByShortestPath(faces=
@@ -292,7 +300,7 @@ mdb.models['Model-1'].parts['up-soil'].PartitionFaceByShortestPath(faces=
     0.0), )), point1=mdb.models['Model-1'].parts['up-soil'].datums[8], point2=
     mdb.models['Model-1'].parts['up-soil'].datums[6])
 mdb.models['Model-1'].parts['up-soil'].PartitionFaceByShortestPath(faces=
-    mdb.models['Model-1'].parts['up-soil'].faces.findAt(((horizon_right_limit/2, wall_vertical_bottom_limit/2, 
+    mdb.models['Model-1'].parts['up-soil'].faces.findAt((((horizon_right_limit+wall_horizon_right_limit)/2, wall_vertical_bottom_limit/2, 
     0.0), )), point1=mdb.models['Model-1'].parts['up-soil'].datums[8], point2=
     mdb.models['Model-1'].parts['up-soil'].datums[9])
 mdb.models['Model-1'].parts['wall'].DatumPointByCoordinate(coords=(wall_horizon_left_limit, excava_vertical_limit_3, 
@@ -305,20 +313,24 @@ mdb.models['Model-1'].parts['wall'].PartitionFaceByShortestPath(faces=
     mdb.models['Model-1'].parts['wall'].faces.findAt((((wall_horizon_left_limit+wall_horizon_right_limit)/2, vertical_up_limit/2, 0.0), ))
     , point1=mdb.models['Model-1'].parts['wall'].datums[2], point2=
     mdb.models['Model-1'].parts['wall'].datums[3])
-mdb.models['Model-1'].parts['bed-soil'].DatumPointByCoordinate(coords=(wall_horizon_left_limit, 
+dt_i = mdb.models['Model-1'].parts['bed-soil'].DatumPointByCoordinate(coords=(wall_horizon_left_limit, 
     0.0, 0.0))
-mdb.models['Model-1'].parts['bed-soil'].DatumPointByCoordinate(coords=(wall_horizon_left_limit, 
-    -wall_vertical_bottom_limit, 0.0))
-mdb.models['Model-1'].parts['bed-soil'].DatumPointByCoordinate(coords=(wall_horizon_right_limit, 
+print("i", dt_i.id)
+dt_j = mdb.models['Model-1'].parts['bed-soil'].DatumPointByCoordinate(coords=(wall_horizon_left_limit, 
+    vertical_bottom_limit, 0.0))
+print("j", dt_j.id)
+dt_k = mdb.models['Model-1'].parts['bed-soil'].DatumPointByCoordinate(coords=(wall_horizon_right_limit, 
     0.0, 0.0))
-mdb.models['Model-1'].parts['bed-soil'].DatumPointByCoordinate(coords=(wall_horizon_right_limit, 
-    -wall_vertical_bottom_limit, 0.0))
+print("k", dt_k.id)
+dt_l = mdb.models['Model-1'].parts['bed-soil'].DatumPointByCoordinate(coords=(wall_horizon_right_limit, 
+    vertical_bottom_limit, 0.0))
+print("l", dt_l.id)
 mdb.models['Model-1'].parts['bed-soil'].PartitionFaceByShortestPath(faces=
-    mdb.models['Model-1'].parts['bed-soil'].faces.findAt(((horizon_right_limit/2, vertical_bottom_limit/2, 
+    mdb.models['Model-1'].parts['bed-soil'].faces.findAt(((horizon_left_limit/2, vertical_bottom_limit/2, 
     0.0), )), point1=mdb.models['Model-1'].parts['bed-soil'].datums[2], point2=
     mdb.models['Model-1'].parts['bed-soil'].datums[3])
 mdb.models['Model-1'].parts['bed-soil'].PartitionFaceByShortestPath(faces=
-    mdb.models['Model-1'].parts['bed-soil'].faces.findAt(((horizon_right_limit/2, 
+    mdb.models['Model-1'].parts['bed-soil'].faces.findAt((((wall_horizon_right_limit+horizon_right_limit)/2, 
     vertical_bottom_limit/2, 0.0), )), point1=
     mdb.models['Model-1'].parts['bed-soil'].datums[4], point2=
     mdb.models['Model-1'].parts['bed-soil'].datums[5])
@@ -533,6 +545,7 @@ mdb.models['Model-1'].SoilsStep(cetol=None, creep=OFF, end=None, name=
     'excavtion-3', previous='excavtion-2', utol=1000000000.0)
 mdb.models['Model-1'].SoilsStep(cetol=None, creep=OFF, end=None, minInc=1e-12, 
     name='injection', previous='excavtion-3', utol=1000000000.0)
+mdb.models['Model-1'].FieldOutputRequest(name='F-Output-1', createStepName='gra')
 mdb.models['Model-1'].fieldOutputRequests['F-Output-1'].setValues(variables=(
     'S', 'LE', 'U', 'RF', 'CF', 'CSTRESS', 'CDISP', 'PHILSM', 'PSILSM', 
     'VOIDR', 'SAT', 'POR'))
