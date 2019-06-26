@@ -1,5 +1,5 @@
 # Py-Abaqus
-Repo of all data and algorithms meant for Graduation Thesis of Geoengineering Master of Xubin Jiang who graduated from the College of Civil Engineering and Architecture of  Zhejiang University. You are welcomed to utilize and spread this project for free.
+Repo of all data and algorithms meant for Graduation Thesis of Geoengineering Master of Xubin Jiang who graduated from the College of Civil Engineering and Architecture of  Zhejiang University. You are welcomed to utilize and spread this project for free. Project url is https://github.com/jiangxubin/py-abaqus. 
 # Fold instruction
 * data:Directory where raw model output data is strored
 * output: Directory where results which have been post-processed 
